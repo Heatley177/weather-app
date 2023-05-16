@@ -3,7 +3,10 @@ import './App.css'
 
 function App() {
   
-  const apiKey = 'd366064fd720218ae086c75058de12a4'
+//ENTER YOUR API KEY BELOW
+  const apiKey = 'Example-API-KEY'
+//ENTER YOUR API KEY ABOVE
+
   const [ weatherData, setWeatherData ] = useState([{}])
   const [ city, setCity ] = useState('')
   const getWeather = (event) => {
