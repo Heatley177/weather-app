@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root {
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*
+background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  height: 100vh;
+  width: 100vw;
+
+  OR 
+  background-color: #1c2321
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input {
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  border: 3px solid #fc6471;
+  border-radius: 6px;
+  font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input:focus {
+  outline: none;
+}
+
+.weather-data {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weather-data > p {
+  margin: 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.city {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.temp {
+  font-size: 80px;
+  font-weight: 800;
+  padding: 10px 40px;
+  border: 3px solid salmon;
+  border-radius: 16px;
+}
+.weather {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 7px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.error-message {
+  font: italic 2.2em light;
+  border: 2px #fc6471;
+  padding: 10px 15px;
+  animation: error-shake 0.15s;
+}
+
+@keyframes error-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }
