@@ -8,6 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - "Enter" key & button click activates data fetch
 - Error message kindly display "City not found. Please check spelling." along with mild shake animation
 - Current date display
+- Error display message focusing on error 401 (invalid API Key), error 404 (invalid city), & not changing the EXAMPLE-API (src -> App.js -> Line 7) to YOUR unique API Key to allow the app to be usable.
 
 ### How to Use
 
