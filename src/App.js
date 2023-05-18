@@ -4,8 +4,23 @@ import './App.css'
 function App() {
   
 //ENTER YOUR API KEY BELOW
-  const apiKey = 'Example-API-KEY'
+  const apiKey = 'EXAMPLE API'
 //ENTER YOUR API KEY ABOVE
+
+
+
+  const currentDate = (d) => {
+    let months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let days = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+  }
+
 
   const [ weatherData, setWeatherData ] = useState([{}])
   const [ city, setCity ] = useState('')
@@ -46,9 +61,11 @@ function App() {
       {typeof weatherData.main === 'undefined' ? (
         <div>
           <p>What's the weather like today? Enter in a city to get started.</p>
+          <div className='date' >{currentDate(new Date())}</div>
         </div>
       ): (
         <div className='weather-data'>
+          <div className='date' >{currentDate(new Date())}</div>
           <p className='city'>{weatherData.name}</p>
           <p className='temp'>{Math.round(weatherData.main.temp)}°F</p>
           <p className='weather'>{weatherData.weather[0].main}</p>

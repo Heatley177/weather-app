@@ -87,3 +87,9 @@ input:focus {
   75% { transform: translate(-5px, 5px) rotate(-5deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }
+
+.date {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
