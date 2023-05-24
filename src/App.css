@@ -1,21 +1,33 @@
 :root {
-  background-color: #D9AFD9;
-  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
   height: 100vh;
   width: 100vw;
-  color: black;
+  color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*
-background-color: #D9AFD9;
-  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+.app {
+  background-color: #4158D0;
+  background-image: linear-gradient(0deg, #4158D0 0%, #507bc8 46%, #70eaff 100%);
   height: 100vh;
-  width: 100vw;
+}
+.app.bgwarm {
+  background-color: #4158D0;
+  background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);  
+  height: 100vh;
+}
 
-  OR 
-  background-color: #1c2321
-*/
+.title {
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.question {
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 1px 1px rgba(50, 50, 70, 0.5);
+  padding: 2px;
+}
 
 .container {
   display: flex;
@@ -29,48 +41,80 @@ background-color: #D9AFD9;
   padding: 15px;
   width: 80%;
   margin: auto;
-  border: 3px solid #fc6471;
-  border-radius: 6px;
   font-size: 1.2rem;
+  color: #313131;
+  font-weight: 900;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.2);
 }
 
 input:focus {
-  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .weather-data {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .weather-data > p {
-  margin: 2vw;
+  margin: 1vw;
 }
 
 .city {
   font-size: 30px;
   font-weight: 800;
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
 .temp {
   font-size: 80px;
-  font-weight: 800;
+  font-weight: 900;
   padding: 10px 40px;
-  border: 3px solid salmon;
   border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  box-shadow: 4px 5px rgba(0, 0, 0, 0.2);
+
 }
 .weather {
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
 .button {
   margin-top: 10px;
   padding: 7px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 900;
+  color: #313131;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, .85);
+  border-radius: 6px;
+  box-shadow: 1px 4px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.button:active {
+  box-shadow: 1px 2px 0px 0px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
 }
 
 .error-message {
@@ -92,4 +136,6 @@ input:focus {
   font-size: 1.4rem;
   font-weight: 600;
   text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+  margin-top: 30px;
 }

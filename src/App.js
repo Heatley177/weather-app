@@ -61,8 +61,14 @@ const handleClick = () => {
 };
 
   return (
+  <div className={
+    (typeof weatherData.main != 'undefined')
+     ? ((weatherData.main.temp > 33) 
+        ? 'app bgwarm'
+         : 'app')
+          : 'app' }>
     <div className='container'>
-      <h1>Yet Another Weather App</h1>
+      <h1 className='title'>Yet Another Weather App</h1>
       <input 
       placeholder='Enter City...'
       className='input'
@@ -73,8 +79,8 @@ const handleClick = () => {
       <button className='button' onClick={handleClick}>Search Weather</button>
       {typeof weatherData.main === 'undefined' ? (
         <div>
-          <p>What's the weather like today? Enter in a city to get started.</p>
           <div className='date' >{currentDate(new Date())}</div>
+          <p className='question'>What's the weather like today? Enter in a city to get started.</p>
         </div>
       ): (
         <div className='weather-data'>
@@ -90,6 +96,7 @@ const handleClick = () => {
               <p className='error-message'>City not found. Please check spelling.</p>
             ) : null}
     </div>
+  </div>
   )
 }
 
