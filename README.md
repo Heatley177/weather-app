@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Error message kindly display "City not found. Please check spelling." along with mild shake animation
 - Current date display
 - Error display message focusing on error 401 (invalid API Key), error 404 (invalid city), & not changing the EXAMPLE-API (src -> App.js -> Line 7) to YOUR unique API Key to allow the app to be usable.
+- Reactive background that adjusts to more vibrant gradient for warm weather (above 32 degrees)
 
 ### How to Use
 
